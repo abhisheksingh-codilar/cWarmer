@@ -8,7 +8,7 @@ export default class LoginPageComponent extends PureComponent {
         const { usernameValue, onSubmit,valueHandlerUsername,valueHandlerPassword,passwordValue,unameempty,pempty,formCompleted} = this.props;
         return (
 
-            <form onSubmit={ onSubmit }>
+            <form onSubmit={ onSubmit } className='container'>
                     <h2>LogIn</h2>
                     <div className={styles.Username}>
                     <label  htmlFor="uname" className='uname'>Username:</label>
@@ -37,7 +37,7 @@ export default class LoginPageComponent extends PureComponent {
 
         return(
             <>
-              <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+              <nav className="navbar  navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">Navbar</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -98,19 +98,19 @@ export default class LoginPageComponent extends PureComponent {
 
     render() {
         return (
-            <>
+            <div className={styles.LoginPage}>
             <div >
                 { this.renderHeader() }
               
             </div>
-            <div className={ styles.LoginPage }>
+            <div className={ styles.form }>
                 { this.renderForm() }
               
             </div>
             <div className={styles.foot}>
                 {this.renderFooter()}
             </div>
-            </>
+            </div>
         )
     }
 
