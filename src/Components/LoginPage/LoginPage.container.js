@@ -23,11 +23,11 @@ export default class LoginPageContainer extends PureComponent {
         event.preventDefault();
 
         if(this.state.usernameValue.length == 0){
-            this.setState({unameempty:true})
+            this.setState({unameempty:true,formCompleted:false})
            
         }
         if(this.state.passwordValue.length == 0){
-            this.setState({pempty:true})
+            this.setState({pempty:true,formCompleted:false})
         }
 
         if(this.state.usernameValue.length!=0 && this.state.passwordValue.length!= 0 ){
